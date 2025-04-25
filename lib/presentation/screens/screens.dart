@@ -1,6 +1,7 @@
 export 'package:pos2/presentation/screens/home/home_screen.dart';
 export 'package:pos2/presentation/screens/login/login_screen.dart';
 export 'package:pos2/presentation/screens/products/products_screen.dart';
+export 'package:pos2/presentation/screens/reports/sales_report_screen.dart';
 export 'package:pos2/presentation/screens/sales/sales_screen.dart';
 export 'package:pos2/presentation/screens/sales/sell_screen.dart';
 export 'package:pos2/presentation/screens/sales/sales_history_screen.dart';

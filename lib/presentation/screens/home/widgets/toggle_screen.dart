@@ -40,6 +40,11 @@ class ToggleScreen extends StatelessWidget {
             routeName: 'Ajustes',
             backgroundColor: Colors.transparent,
           ),
+          RouteCard(
+            route: 'reports',
+            routeName: 'Reportes',
+            backgroundColor: Colors.transparent,
+          ),
         ],
       ),
     );
