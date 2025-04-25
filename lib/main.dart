@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pos2/presentation/providers/theme/theme_provider.dart';
 import 'package:pos2/routes/routes.dart';
+import 'config/theme/app_theme.dart';
 import 'data/data_sources/product_datasource.dart';
 
 late ObjectBox objectbox;
@@ -18,20 +20,19 @@ Future<void> main() async {
   runApp(ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   MyApp({super.key});
 
   final Routes _routes = Routes();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final bool isDarkMode = ref.watch(darkModeProvider);
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'MiniMarket',
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-      ),
+      theme: AppTheme(isDarkMode: isDarkMode).getTheme(),
       routerConfig: _routes.router,
     );
   }

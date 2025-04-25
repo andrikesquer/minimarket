@@ -18,6 +18,20 @@ class Routes {
         builder: (BuildContext context, GoRouterState state) {
           return const SalesScreen();
         },
+        routes: [
+          GoRoute(
+            path: 'sell',
+            builder: (context, state) {
+              return SellScreen();
+            },
+          ),
+          GoRoute(
+            path: 'history',
+            builder: (context, state) {
+              return SalesHistory();
+            },
+          ),
+        ],
       ),
       GoRoute(
         path: '/cart',

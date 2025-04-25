@@ -15,7 +15,7 @@ class Cart extends ConsumerWidget {
       child: Scaffold(
         appBar: CartAppBar(),
         body: CartItemsList(items: items),
-        bottomNavigationBar: SellButton(itemsLength: items.length),
+        bottomNavigationBar: SellButton(items: items),
       ),
     );
   }

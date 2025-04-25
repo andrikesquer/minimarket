@@ -4,6 +4,8 @@ import 'package:pos2/domain/entities/cart_item_entity.dart';
 import 'package:pos2/domain/entities/shop_order_entity.dart';
 import 'package:pos2/main.dart';
 
+import 'package:pos2/domain/entities/product_entity.dart';
+
 class CartItemsNotifier extends StateNotifier<List<CartItem>> {
   CartItemsNotifier() : super(objectbox.getCartItems());
 
@@ -50,16 +52,19 @@ class CartItemsNotifier extends StateNotifier<List<CartItem>> {
     refresh();
   }
 
-  void confirmOrder() {
-    final items = objectbox.getCartItems();
-
+  void confirmOrder(List<CartItem> items) {
     if (items.isEmpty) return;
 
-    final date = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+    final String date = DateFormat(
+      'yyyy-MM-dd HH:mm:ss',
+    ).format(DateTime.now());
 
     double total = 0;
     for (CartItem item in items) {
       total += item.subtotal;
+      Product? product = objectbox.getProduct(item.productId);
+      product?.stock = product.stock - item.productQty;
+      objectbox.updateProduct(product!);
     }
 
     final ShopOrder order = ShopOrder(date: date, total: total);

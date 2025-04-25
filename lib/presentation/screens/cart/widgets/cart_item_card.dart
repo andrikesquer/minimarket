@@ -11,7 +11,6 @@ class CartItemCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
       elevation: 0,
-      foregroundColor: Colors.black,
     );
 
     return Card.outlined(

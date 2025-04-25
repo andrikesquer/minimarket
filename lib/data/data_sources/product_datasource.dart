@@ -86,6 +86,10 @@ class ObjectBox {
 
   // ORDENES
 
+  List<ShopOrder> getAllOrders() {
+    return shopOrderBox.getAll();
+  }
+
   void saveOrder(ShopOrder order) {
     shopOrderBox.put(order);
   }

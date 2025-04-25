@@ -43,7 +43,6 @@ class _ProductsState extends ConsumerState<Products> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
         appBar: ProductsAppBar(),
         body: ListView(
           padding: EdgeInsets.all(20),

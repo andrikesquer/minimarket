@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pos2/presentation/providers/cart/cart_items_provider.dart';
+import 'package:pos2/presentation/providers/products_provider.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../providers/cart/cart_items_provider.dart';
+import 'package:pos2/domain/entities/cart_item_entity.dart';
 
 class SellButton extends ConsumerWidget {
-  final int itemsLength;
-  const SellButton({super.key, required this.itemsLength});
+  final List<CartItem> items;
+  const SellButton({super.key, required this.items});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
       elevation: 0,
-      backgroundColor: Colors.black,
     );
 
     return Padding(
@@ -20,16 +20,15 @@ class SellButton extends ConsumerWidget {
       child: ElevatedButton(
         style: buttonStyle,
         onPressed: () {
-          if (itemsLength > 0) {
-            debugPrint('Vender');
-            // ref.read(cartItemsProvider.notifier).removeAll();
-            ref.read(cartItemsProvider.notifier).confirmOrder();
+          if (items.isEmpty) {
+            context.go('/sales/sell');
           } else {
-            context.go('/sales');
+            ref.read(cartItemsProvider.notifier).confirmOrder(items);
+            ref.read(productsProvider.notifier).refresh();
           }
         },
         child: Text(
-          itemsLength > 0 ? 'Vender' : 'Ver productos',
+          items.isEmpty ? 'Ver productos' : 'Vender',
           style: TextStyle(color: Colors.white),
         ),
       ),

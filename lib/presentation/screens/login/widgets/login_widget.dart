@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pos2/core/encryption/user_credentials.dart';
+import 'package:pos2/core/encryption/secure_storage.dart';
 import 'package:pos2/domain/repositories/login_repository.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -123,7 +123,7 @@ class LoginWidgetState extends State<LoginWidget> {
     if (_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text('Iniciando Sesión')));
+      ).showSnackBar(SnackBar(content: const Text('Iniciando Sesión'), backgroundColor: Colors.green[600]));
 
       try {
         final response = await loginRepo.login(email, password);
