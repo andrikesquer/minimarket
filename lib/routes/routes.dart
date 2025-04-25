@@ -26,9 +26,9 @@ class Routes {
         },
       ),
       GoRoute(
-        path: '/configuration',
+        path: '/settings',
         builder: (BuildContext context, GoRouterState state) {
-          return const ConfigurationScreen();
+          return const SettingsScreen();
         },
       ),
       GoRoute(

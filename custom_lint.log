@@ -481,3 +481,506 @@ at:
 #4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
 <asynchronous suspension>
 
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /home/andrik/.pub-cache/hosted/pub.dev/objectbox-4.2.0/lib/src/native/box.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:145:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:509:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:554:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:273:11)
+<asynchronous suspension>
+#1      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#2      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#3      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 Plugin ConvertToStatelessBaseWidget threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #6      _rootRun (dart:async/zone.dart:1517:47)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #10     _rootRun (dart:async/zone.dart:1525:13)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[ConvertToStatelessBaseWidget] 2025-04-24T21:58:04.739741
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 Plugin ConvertToStatefulBaseWidget threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #6      _rootRun (dart:async/zone.dart:1517:47)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #10     _rootRun (dart:async/zone.dart:1525:13)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741709
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 Plugin ConvertToStatefulBaseWidget threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #6      _rootRun (dart:async/zone.dart:1517:47)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #10     _rootRun (dart:async/zone.dart:1525:13)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[ConvertToStatefulBaseWidget] 2025-04-24T21:58:04.741945
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 Plugin WrapWithConsumer threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-04-24T21:58:04.742173
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithConsumer] 2025-04-24T21:58:04.742173
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 Plugin WrapWithProviderScope threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742322
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 Plugin WrapWithConsumer threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-04-24T21:58:04.742431
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithConsumer] 2025-04-24T21:58:04.742431
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 Plugin WrapWithProviderScope threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742547
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 Plugin WrapWithConsumer threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-04-24T21:58:04.742648
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithConsumer] 2025-04-24T21:58:04.742648
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 Plugin WrapWithProviderScope threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742755
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 Plugin WrapWithConsumer threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-04-24T21:58:04.742864
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithConsumer] 2025-04-24T21:58:04.742864
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 Plugin WrapWithProviderScope threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithProviderScope] 2025-04-24T21:58:04.742987
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 Plugin WrapWithConsumer threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-04-24T23:21:22.758419
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithConsumer] 2025-04-24T23:21:22.758419
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 Plugin WrapWithProviderScope threw while analyzing /home/andrik/Documents/ADS/minimarket/lib/presentation/screens/cart/cart_screen.dart:
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #5      new Future.<anonymous closure> (dart:async/future.dart:260:40)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #6      _rootRun (dart:async/zone.dart:1517:47)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #7      _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #8      _CustomZone.runGuarded (dart:async/zone.dart:1321:7)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1362:23)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #10     _rootRun (dart:async/zone.dart:1525:13)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #11     _CustomZone.run (dart:async/zone.dart:1422:19)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1345:23)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:410:19)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:441:5)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:194:12)
+[WrapWithProviderScope] 2025-04-24T23:21:22.766091

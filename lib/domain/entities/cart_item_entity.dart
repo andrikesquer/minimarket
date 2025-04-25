@@ -1,4 +1,5 @@
 import 'package:objectbox/objectbox.dart';
+import 'package:pos2/domain/entities/shop_order_entity.dart';
 
 @Entity()
 class CartItem {
@@ -11,15 +12,21 @@ class CartItem {
 
   double productPrice;
 
-  int productQuantity;
+  int productStock;
+
+  int productQty;
+
+
+  final shopOrder = ToOne<ShopOrder>();
 
   CartItem({
     this.id = 0,
     required this.productId,
     required this.productName,
     required this.productPrice,
-    required this.productQuantity,
+    required this.productStock,
+    required this.productQty,
   });
 
-  double get subtotal => productPrice * productQuantity;
+  double get subtotal => productPrice * productQty;
 }

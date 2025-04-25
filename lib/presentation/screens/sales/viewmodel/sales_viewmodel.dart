@@ -5,6 +5,8 @@ import 'package:pos2/domain/entities/product_entity.dart';
 import 'package:pos2/domain/repositories/cart_repository.dart';
 import 'package:pos2/presentation/providers/cart/cart_repository_provider.dart';
 
+import '../../../providers/cart/cart_items_provider.dart';
+
 class SalesViewModel extends AutoDisposeNotifier<Map<int, int>> {
   late final CartRepository _cartRepository;
 
@@ -29,10 +31,6 @@ class SalesViewModel extends AutoDisposeNotifier<Map<int, int>> {
     }
   }
 
-  void resetCounter(int productId) {
-    state = {...state, productId: state[productId] = 0};
-  }
-
   void addToCart(Product product) {
     final int count = state[product.id] ?? 0;
     if (count == 0) return;
@@ -41,19 +39,10 @@ class SalesViewModel extends AutoDisposeNotifier<Map<int, int>> {
       productId: product.id,
       productName: product.name,
       productPrice: product.price,
-      productQuantity: count,
+      productStock: product.stock,
+      productQty: count,
     );
 
-    _cartRepository.manageAddProduct(item);
-
-    List<CartItem> getCartItems() => _cartRepository.getAll();
-
-    List<CartItem> items = getCartItems();
-
-    for (CartItem i in items) {
-      debugPrint('-----------------');
-      debugPrint(i.productName);
-      debugPrint('${i.productQuantity}');
-    }
+    ref.read(cartItemsProvider.notifier).add(item);
   }
 }

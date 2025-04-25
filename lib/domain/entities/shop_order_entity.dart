@@ -1,29 +1,16 @@
 import 'package:objectbox/objectbox.dart';
-import 'entities.dart';
+import 'cart_item_entity.dart';
 
 @Entity()
 class ShopOrder {
-  int id;
+  @Id()
+  int id = 0;
 
-  List<int> products;
-
-  List<int> quantities;
-
-  List<double> subtotals;
-
-  @Property(type: PropertyType.date)
-  DateTime date;
-
+  String date;
   double total;
 
-  ShopOrder({
-    this.id = 0,
-    required this.products,
-    required this.quantities,
-    required this.subtotals,
-    required this.date,
-    required this.total,
-  });
+  @Backlink('shopOrder')
+  final items = ToMany<CartItem>();
 
-  final product = ToMany<Product>();
+  ShopOrder({required this.date, required this.total});
 }

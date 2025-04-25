@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pos2/routes/routes.dart';
-import 'data/datasource/product_datasource.dart';
+import 'data/data_sources/product_datasource.dart';
 
 late ObjectBox objectbox;
 

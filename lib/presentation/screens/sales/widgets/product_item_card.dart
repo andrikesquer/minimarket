@@ -44,7 +44,9 @@ class ProductItemCard extends ConsumerWidget {
                   Text('$counter'),
                   IconButton(
                     onPressed: () {
-                      viewModel.incrementCounter(product.id);
+                      if (product.stock > counter) {
+                        viewModel.incrementCounter(product.id);
+                      }
                     },
                     icon: Icon(Icons.add),
                   ),

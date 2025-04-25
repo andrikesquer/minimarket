@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pos2/domain/entities/cart_item_entity.dart';
+import 'package:pos2/presentation/providers/cart/cart_items_provider.dart';
 
 class CartItemCard extends ConsumerWidget {
   final CartItem item;
@@ -8,7 +9,6 @@ class CartItemCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.black,
@@ -23,9 +23,14 @@ class CartItemCard extends ConsumerWidget {
           spacing: 5,
           children: [
             Icon(Icons.fastfood),
-            Text(
-              item.productName,
-              style: TextStyle(fontWeight: FontWeight.w600),
+            Column(
+              children: [
+                Text(
+                  item.productName,
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
+                Text('Stock: ${item.productStock}'),
+              ],
             ),
             Text('\$${item.subtotal}'),
             Column(
@@ -37,23 +42,24 @@ class CartItemCard extends ConsumerWidget {
                     ElevatedButton(
                       style: buttonStyle,
                       onPressed: () {
-                        debugPrint('decrement');
-                        debugPrint('Item.productId: ${item.productId}');
-                        debugPrint('item.productQuantity: ${item.productQuantity}');
-                        // debugPrint('$counter');
+                        ref
+                            .read(cartItemsProvider.notifier)
+                            .decrementQty(item.productId);
                       },
                       child:
-                          item.productQuantity == 1
+                          item.productQty == 1
                               ? Icon(Icons.delete_outline)
                               : Icon(Icons.remove),
                     ),
-                    Text('${item.productQuantity}'),
+                    Text('${item.productQty}'),
                     ElevatedButton(
                       style: buttonStyle,
                       onPressed: () {
-                        debugPrint('increment');
-                        debugPrint('Item.productId: ${item.productId}');
-                        debugPrint('item.productQuantity: ${item.productQuantity}');
+                        if (item.productQty < item.productStock) {
+                          ref
+                              .read(cartItemsProvider.notifier)
+                              .incrementQty(item.productId);
+                        }
                       },
                       child: Icon(Icons.add),
                     ),

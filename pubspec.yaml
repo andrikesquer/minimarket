@@ -112,4 +112,4 @@ flutter:
 
 objectbox:
   output_dir:
-    lib: data/datasource
+    lib: data/data_sources
