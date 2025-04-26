@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'config/theme/app_theme.dart';
 import 'package:pos2/presentation/providers/theme/theme_provider.dart';
 import 'package:pos2/routes/routes.dart';
-import 'config/theme/app_theme.dart';
-import 'data/data_sources/product_datasource.dart';
+import 'data/data_sources/objectbox.dart';
 
 late ObjectBox objectbox;
 

@@ -57,12 +57,6 @@ class Routes {
           return Home(email: state.pathParameters['email']);
         },
       ),
-      GoRoute(
-        path: '/reports',
-        builder: (BuildContext context, GoRouterState state) {
-          return const SalesReports();
-        },
-      ),
     ],
   );
 }

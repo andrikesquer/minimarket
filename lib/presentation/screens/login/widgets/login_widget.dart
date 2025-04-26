@@ -22,9 +22,7 @@ class LoginWidgetState extends State<LoginWidget> {
 
   bool _obscureTextPassword = true;
 
-  bool isLoading = false;
-
-  final loginRepo = LoginRepository();
+  final LoginRepository loginRepository = LoginRepository();
 
   @override
   void initState() {
@@ -33,6 +31,8 @@ class LoginWidgetState extends State<LoginWidget> {
 
   @override
   void dispose() {
+    loginEmailController.dispose();
+    loginPasswordController.dispose();
     focusNodeEmail.dispose();
     focusNodePassword.dispose();
     super.dispose();
@@ -40,68 +40,72 @@ class LoginWidgetState extends State<LoginWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(top: 20.0),
-      child: Form(
-        key: _formKey,
-        child: Column(
-          children: <Widget>[
-            Text("Inicio de Sesión"),
-            TextFormField(
-              focusNode: focusNodeEmail,
-              controller: loginEmailController,
-              keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
-                icon: Icon(Icons.email),
-                hintText: 'Email',
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Ingrese un email, por favor';
-                }
-                return null;
-              },
-              onFieldSubmitted: (_) {
-                focusNodePassword.requestFocus();
-              },
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: <Widget>[
+          Text(
+            "Inicio de Sesión",
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+          ),
+          SizedBox(height: 20),
+          TextFormField(
+            focusNode: focusNodeEmail,
+            controller: loginEmailController,
+            keyboardType: TextInputType.emailAddress,
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.email_outlined),
+              hintText: 'Email',
             ),
-            TextFormField(
-              focusNode: focusNodePassword,
-              controller: loginPasswordController,
-              obscureText: _obscureTextPassword,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                icon: Icon(Icons.lock),
-                hintText: 'Contraseña',
-                suffixIcon: GestureDetector(
-                  onTap: _togglePassVisibility,
-                  child: Icon(
-                    _obscureTextPassword ? Icons.remove_red_eye : Icons.block,
-                  ),
+            validator: (String? value) {
+              if (value == null || value.isEmpty) {
+                return 'Ingrese un email, por favor';
+              }
+              return null;
+            },
+            onFieldSubmitted: (String _) {
+              focusNodePassword.requestFocus();
+            },
+          ),
+          SizedBox(height: 20),
+          TextFormField(
+            focusNode: focusNodePassword,
+            controller: loginPasswordController,
+            obscureText: _obscureTextPassword,
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.lock_outline),
+              hintText: 'Contraseña',
+              suffixIcon: GestureDetector(
+                onTap: _togglePassVisibility,
+                child: Icon(
+                  _obscureTextPassword
+                      ? Icons.remove_red_eye_outlined
+                      : Icons.block_outlined,
                 ),
               ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Ingrese su contraseña, por favor';
-                }
-                return null;
-              },
-              onFieldSubmitted: (_) {
-                _toggleLogin();
-              },
-              textInputAction: TextInputAction.go,
             ),
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: ElevatedButton(
-                onPressed: () {
-                  _toggleLogin();
-                },
-                child: const Text('Iniciar Sesión'),
-              ),
-            ),
-          ],
-        ),
+            validator: (String? value) {
+              if (value == null || value.isEmpty) {
+                return 'Ingrese su contraseña, por favor';
+              }
+              return null;
+            },
+            onFieldSubmitted: (String _) {
+              _toggleLogin();
+            },
+            textInputAction: TextInputAction.go,
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              _toggleLogin();
+            },
+            child: const Text('Iniciar Sesión'),
+          ),
+        ],
       ),
     );
   }
@@ -113,24 +117,20 @@ class LoginWidgetState extends State<LoginWidget> {
   }
 
   void _toggleLogin() async {
-    setState(() {
-      isLoading = true;
-    });
-
     String email = loginEmailController.text.trim();
     String password = loginPasswordController.text.trim();
 
     if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: const Text('Iniciando Sesión'), backgroundColor: Colors.green[600]));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text('Iniciando Sesión'),
+          backgroundColor: Colors.green[600],
+        ),
+      );
 
       try {
-        final response = await loginRepo.login(email, password);
+        final response = await loginRepository.login(email, password);
         if (response.Success) {
-          debugPrint(
-            "Login exitoso de ${response.Email}, IdSubscription: ${response.IdSubscription}",
-          );
           UserCredentials.saveCredentials(
             response.Email,
             response.IdSubscription,
@@ -140,22 +140,13 @@ class LoginWidgetState extends State<LoginWidget> {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Credenciales incorrectas')),
           );
-          debugPrint("Credenciales incorrectas");
         }
       } catch (e) {
         debugPrint("Error: ${e.toString()}");
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text('Error al procesar solicitud')));
-      } finally {
-        setState(() {
-          isLoading = false;
-        });
       }
-    } else {
-      setState(() {
-        isLoading = false;
-      });
     }
   }
 }
