@@ -111,5 +111,4 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 
 objectbox:
-  output_dir:
-    lib: data/data_sources
+  output_dir: data/data_sources

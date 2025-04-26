@@ -12,7 +12,7 @@ class SellAppBar extends StatelessWidget implements PreferredSizeWidget  {
         icon: Icon(Icons.arrow_back),
       ),
       title: const Text(
-        'Artículos de Venta',
+        'Artículos de venta',
         style: TextStyle(fontSize: 24, decoration: TextDecoration.none),
       ),
       actions: [

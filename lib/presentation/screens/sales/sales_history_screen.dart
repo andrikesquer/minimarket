@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pos2/presentation/providers/orders/orders_providers.dart';
+import 'package:pos2/presentation/providers/orders_provider.dart';
 import 'package:pos2/presentation/screens/sales/widgets/sales_history/orders_list.dart';
 import 'package:pos2/presentation/screens/sales/widgets/sales_history/sales_history_app_bar.dart';
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pos2/main.dart';
-import 'package:pos2/presentation/providers/providers.dart';
-import 'package:pos2/domain/entities/entities.dart';
+import 'package:pos2/domain/entities/product_entity.dart';
+import 'package:pos2/presentation/providers/products/products_provider.dart';
 
 class EditingForm extends ConsumerWidget {
   EditingForm({super.key});
@@ -15,9 +14,9 @@ class EditingForm extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isEditing = ref.watch(editingProductProvider);
+    final bool isEditing = ref.watch(editingProductProvider);
 
-    final product = ref.watch(selectedProductProvider);
+    final Product? product = ref.watch(selectedProductProvider);
 
     final TextEditingController nameController = TextEditingController(
       text: product?.name,
@@ -31,14 +30,15 @@ class EditingForm extends ConsumerWidget {
 
     void updateProduct(BuildContext context) {
       if (_formKey.currentState!.validate()) {
-        final updateProduct = Product(
+        final Product updateProduct = Product(
           id: product!.id,
           name: nameController.text,
           price: double.parse(priceController.text),
           stock: int.parse(stockController.text),
         );
 
-        objectbox.updateProduct(updateProduct);
+        ref.watch(productsProvider.notifier).add(updateProduct);
+        // objectbox.updateProduct(updateProduct);
 
         ref.read(productsProvider.notifier).refresh();
         ref.read(editingProductProvider.notifier).toggleEditProduct();
@@ -80,71 +80,82 @@ class EditingForm extends ConsumerWidget {
       );
     }
 
+    Widget editForm() {
+      return Form(
+        key: _formKey,
+        child: Column(
+          children: <Widget>[
+            Text('Actualizando Producto', style: TextStyle(fontSize: 20)),
+            SizedBox(height: 10),
+            TextFormField(
+              focusNode: focusNodeName,
+              controller: nameController,
+              keyboardType: TextInputType.text,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.short_text_outlined),
+                hintText: 'Nombre',
+              ),
+              validator: (String? value) {
+                if (value == null || value.isEmpty) {
+                  return 'Ingrese el nombre del producto, por favor';
+                }
+                return null;
+              },
+              onFieldSubmitted: (String _) {
+                focusNodePrice.requestFocus();
+              },
+            ),
+            SizedBox(height: 10),
+            TextFormField(
+              focusNode: focusNodePrice,
+              controller: priceController,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.attach_money),
+                hintText: 'Precio',
+              ),
+              validator: (String? value) {
+                if (value == null || value.isEmpty) {
+                  return 'Ingrese el precio del producto, por favor';
+                }
+                return null;
+              },
+              onFieldSubmitted: (String _) {
+                focusNodeStock.requestFocus();
+              },
+            ),
+            SizedBox(height: 10),
+            TextFormField(
+              focusNode: focusNodeStock,
+              controller: stockController,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.money_outlined),
+                hintText: 'Stock inicial',
+              ),
+              validator: (String? value) {
+                if (value == null || value.isEmpty) {
+                  return 'Ingrese el stock inicial del producto, por favor';
+                }
+                return null;
+              },
+              onFieldSubmitted: (String _) {
+                updateProduct(context);
+              },
+              textInputAction: TextInputAction.go,
+            ),
+            confirmationButtons(),
+          ],
+        ),
+      );
+    }
+
     return SingleChildScrollView(
       padding: EdgeInsets.only(top: 20),
-      child:
-          isEditing
-              ? Form(
-                key: _formKey,
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      'Actualizando Producto',
-                      style: TextStyle(fontSize: 25),
-                    ),
-                    TextFormField(
-                      focusNode: focusNodeName,
-                      controller: nameController,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(hintText: 'Nombre'),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Ingrese el nombre del producto, por favor';
-                        }
-                        return null;
-                      },
-                      onFieldSubmitted: (_) {
-                        focusNodePrice.requestFocus();
-                      },
-                    ),
-                    TextFormField(
-                      focusNode: focusNodePrice,
-                      controller: priceController,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(hintText: 'Precio'),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Ingrese el precio del producto, por favor';
-                        }
-                        return null;
-                      },
-                      onFieldSubmitted: (_) {
-                        focusNodeStock.requestFocus();
-                      },
-                    ),
-                    TextFormField(
-                      focusNode: focusNodeStock,
-                      controller: stockController,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        hintText: 'Stock inicial',
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Ingrese el stock inicial del producto, por favor';
-                        }
-                        return null;
-                      },
-                      onFieldSubmitted: (_) {
-                        updateProduct(context);
-                      },
-                      textInputAction: TextInputAction.go,
-                    ),
-                    confirmationButtons(),
-                  ],
-                ),
-              )
-              : Container(),
+      child: isEditing ? editForm() : Container(),
     );
   }
 }

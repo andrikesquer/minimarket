@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pos2/presentation/providers/providers.dart';
-import 'package:pos2/domain/entities/entities.dart';
+import 'package:pos2/domain/entities/product_entity.dart';
+import 'package:pos2/presentation/providers/products/products_provider.dart';
 
 class ProductTable extends ConsumerWidget {
   final List<Product> products;

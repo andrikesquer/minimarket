@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
-import 'package:pos2/presentation/providers/providers.dart';
-import 'package:pos2/domain/entities/entities.dart';
+import 'package:pos2/domain/entities/product_entity.dart';
+import 'package:pos2/presentation/providers/products/products_provider.dart';
 import 'package:pos2/presentation/screens/products/widgets/products.dart';
 
 class Products extends ConsumerStatefulWidget {
@@ -23,13 +22,13 @@ class _ProductsState extends ConsumerState<Products> {
   }
 
   void _filterProducts(String query) {
-    final allProducts = ref.read(productsProvider);
+    final List<Product> allProducts = ref.read(productsProvider);
 
     setState(() {
       filteredProducts =
           allProducts
               .where(
-                (p) =>
+                (Product p) =>
                     p.name.toLowerCase().contains(query.toLowerCase()) ||
                     p.id.toString().contains(query),
               )
@@ -39,7 +38,7 @@ class _ProductsState extends ConsumerState<Products> {
 
   @override
   Widget build(BuildContext context) {
-    final allProducts = ref.watch(productsProvider);
+    final List<Product> allProducts = ref.watch(productsProvider);
 
     return SafeArea(
       child: Scaffold(
@@ -50,12 +49,13 @@ class _ProductsState extends ConsumerState<Products> {
             TextField(
               controller: searchController,
               decoration: InputDecoration(
-                hintText: 'Buscar producto',
-                prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.search),
+                hintText: 'Buscar producto',
               ),
               onChanged: _filterProducts,
             ),
+            SizedBox(height: 10),
             Column(
               children: [
                 ProductTable(
@@ -64,7 +64,7 @@ class _ProductsState extends ConsumerState<Products> {
                           ? allProducts
                           : filteredProducts,
                 ),
-                ProductForm(),
+                NewProductForm(),
                 EditingForm(),
               ],
             ),

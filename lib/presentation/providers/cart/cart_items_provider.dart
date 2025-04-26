@@ -1,45 +1,45 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:pos2/domain/entities/cart_item_entity.dart';
-import 'package:pos2/domain/entities/shop_order_entity.dart';
-import 'package:pos2/main.dart';
-
-import 'package:pos2/domain/entities/product_entity.dart';
+import 'package:pos2/domain/repositories/cart_repository.dart';
 
 class CartItemsNotifier extends StateNotifier<List<CartItem>> {
-  CartItemsNotifier() : super(objectbox.getCartItems());
+  final CartRepository _repository;
+
+  CartItemsNotifier(this._repository) : super([]) {
+    refresh();
+  }
 
   void refresh() {
-    state = objectbox.getCartItems();
+    state = _repository.getCartItems();
   }
 
   void add(CartItem item) {
-    objectbox.addCartItem(item);
+    _repository.addCartItem(item);
     refresh();
   }
 
   void remove(int productId) {
-    objectbox.removeCartItem(productId);
+    _repository.removeCartItem(productId);
     refresh();
   }
 
   void incrementQty(int productId) {
-    final item = objectbox.existenceCheck(productId);
+    final CartItem? item = _repository.existenceCheck(productId);
 
     if (item != null) {
       item.productQty++;
-      objectbox.cartBox.put(item);
+      _repository.updateCartItem(item);
       refresh();
     }
   }
 
   void decrementQty(int productId) {
-    final item = objectbox.existenceCheck(productId);
+    final CartItem? item = _repository.existenceCheck(productId);
 
     if (item != null) {
       if (item.productQty > 1) {
         item.productQty--;
-        objectbox.cartBox.put(item);
+        _repository.updateCartItem(item);
       } else {
         remove(productId);
       }
@@ -48,34 +48,17 @@ class CartItemsNotifier extends StateNotifier<List<CartItem>> {
   }
 
   void removeAll() {
-    objectbox.removeAll();
+    _repository.removeAllCartItems();
     refresh();
-  }
-
-  void confirmOrder(List<CartItem> items) {
-    if (items.isEmpty) return;
-
-    final String date = DateFormat(
-      'yyyy-MM-dd HH:mm:ss',
-    ).format(DateTime.now());
-
-    double total = 0;
-    for (CartItem item in items) {
-      total += item.subtotal;
-      Product? product = objectbox.getProduct(item.productId);
-      product?.stock = product.stock - item.productQty;
-      objectbox.updateProduct(product!);
-    }
-
-    final ShopOrder order = ShopOrder(date: date, total: total);
-    order.items.addAll(items);
-
-    objectbox.saveOrder(order);
-    removeAll();
   }
 }
 
+final cartRepositoryProvider = Provider<CartRepository>((ref) {
+  return CartRepository();
+});
+
 final cartItemsProvider =
     StateNotifierProvider<CartItemsNotifier, List<CartItem>>((ref) {
-      return CartItemsNotifier();
+      final repository = ref.watch(cartRepositoryProvider);
+      return CartItemsNotifier(repository);
     });

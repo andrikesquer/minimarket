@@ -4,9 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'config/theme/app_theme.dart';
 import 'package:pos2/presentation/providers/theme/theme_provider.dart';
 import 'package:pos2/routes/routes.dart';
-import 'data/data_sources/objectbox.dart';
+import 'data/data_sources/objectbox_database.dart';
 
-late ObjectBox objectbox;
+late ObjectBoxDatabase objectbox;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +15,7 @@ Future<void> main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  objectbox = await ObjectBox.create();
+  objectbox = await ObjectBoxDatabase.create();
 
   runApp(ProviderScope(child: MyApp()));
 }

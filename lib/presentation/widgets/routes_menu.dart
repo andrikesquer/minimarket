@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pos2/data/models/routes/route_card_model.dart';
+import 'package:pos2/data/models/route_card_model.dart';
 import 'package:pos2/presentation/widgets/route_card.dart';
 
 class RoutesMenu extends StatelessWidget {

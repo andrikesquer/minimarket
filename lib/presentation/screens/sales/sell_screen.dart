@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pos2/presentation/providers/products_provider.dart';
-import 'package:pos2/presentation/screens/sales/widgets/sales.dart';
+import 'package:pos2/presentation/providers/products/products_provider.dart';
 import 'package:pos2/presentation/screens/sales/widgets/sell/sell_app_bar.dart';
+import 'package:pos2/presentation/screens/sales/widgets/sell/product_grid.dart';
 
 class SellScreen extends ConsumerWidget {
   const SellScreen({super.key});

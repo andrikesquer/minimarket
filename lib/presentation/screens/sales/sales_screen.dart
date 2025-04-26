@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pos2/data/models/routes/route_card_model.dart';
+import 'package:pos2/data/models/route_card_model.dart';
 import 'package:pos2/presentation/screens/sales/widgets/sales/sales_app_bar.dart';
 import 'package:pos2/presentation/widgets/routes_menu.dart';
 

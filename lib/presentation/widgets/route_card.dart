@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pos2/data/models/routes/route_card_model.dart';
+import 'package:pos2/data/models/route_card_model.dart';
 
 class RouteCard extends StatelessWidget {
   final RouteCardModel model;

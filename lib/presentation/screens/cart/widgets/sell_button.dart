@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pos2/presentation/providers/orders_provider.dart';
+import 'package:pos2/presentation/providers/products/products_provider.dart';
 import 'package:pos2/presentation/providers/cart/cart_items_provider.dart';
-import 'package:pos2/presentation/providers/products_provider.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pos2/domain/entities/cart_item_entity.dart';
 
@@ -11,9 +12,7 @@ class SellButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
-      elevation: 0,
-    );
+    final ButtonStyle buttonStyle = ElevatedButton.styleFrom(elevation: 0);
 
     return Padding(
       padding: EdgeInsets.all(15),
@@ -23,14 +22,12 @@ class SellButton extends ConsumerWidget {
           if (items.isEmpty) {
             context.go('/sales/sell');
           } else {
-            ref.read(cartItemsProvider.notifier).confirmOrder(items);
+            ref.read(ordersProvider.notifier).confirmOrder(items);
             ref.read(productsProvider.notifier).refresh();
+            ref.read(cartItemsProvider.notifier).refresh();
           }
         },
-        child: Text(
-          items.isEmpty ? 'Ver productos' : 'Vender',
-          style: TextStyle(color: Colors.white),
-        ),
+        child: Text(items.isEmpty ? 'Ver productos' : 'Vender'),
       ),
     );
   }

@@ -14,7 +14,7 @@ class CartAppBar extends StatelessWidget implements PreferredSizeWidget {
         },
       ),
       title: Text(
-        'Carrito de Ventas',
+        'Carrito de ventas',
         style: TextStyle(fontSize: 24, decoration: TextDecoration.none),
       ),
       actions: [

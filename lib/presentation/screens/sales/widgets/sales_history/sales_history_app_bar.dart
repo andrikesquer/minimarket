@@ -13,7 +13,7 @@ class SalesHistoryAppBar extends StatelessWidget
         icon: Icon(Icons.arrow_back),
       ),
       title: const Text(
-        'Historial de Ventas',
+        'Historial de ventas',
         style: TextStyle(fontSize: 24, decoration: TextDecoration.none),
       ),
       actions: [

@@ -1,11 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pos2/domain/entities/cart_item_entity.dart';
 import 'package:pos2/domain/entities/product_entity.dart';
 import 'package:pos2/domain/repositories/cart_repository.dart';
-import 'package:pos2/presentation/providers/cart/cart_repository_provider.dart';
-
-import '../../../providers/cart/cart_items_provider.dart';
+import 'package:pos2/presentation/providers/cart/cart_items_provider.dart';
 
 class SalesViewModel extends AutoDisposeNotifier<Map<int, int>> {
   late final CartRepository _cartRepository;
@@ -25,7 +22,7 @@ class SalesViewModel extends AutoDisposeNotifier<Map<int, int>> {
   }
 
   void decrementCounter(int productId) {
-    final current = state[productId] ?? 0;
+    final int current = state[productId] ?? 0;
     if (current > 0) {
       state = {...state, productId: current - 1};
     }

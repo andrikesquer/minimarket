@@ -14,7 +14,7 @@ class OrdersList extends ConsumerWidget {
       padding: EdgeInsets.all(15),
       itemCount: orders.length,
       itemBuilder: (BuildContext context, int index) {
-        final order = orders[index];
+        final ShopOrder order = orders[index];
         return OrderCart(order: order);
       },
     );

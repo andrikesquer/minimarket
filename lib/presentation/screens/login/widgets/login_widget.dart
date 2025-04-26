@@ -83,7 +83,7 @@ class LoginWidgetState extends State<LoginWidget> {
                 child: Icon(
                   _obscureTextPassword
                       ? Icons.remove_red_eye_outlined
-                      : Icons.block_outlined,
+                      : Icons.remove_red_eye,
                 ),
               ),
             ),
