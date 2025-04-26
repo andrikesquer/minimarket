@@ -46,6 +46,12 @@ class Routes {
         },
       ),
       GoRoute(
+        path: '/reports',
+        builder: (BuildContext context, GoRouterState state) {
+          return const ReportsScreen();
+        },
+      ),
+      GoRoute(
         path: '/login',
         builder: (BuildContext context, GoRouterState state) {
           return const LoginScreen();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pos2/presentation/screens/home/widgets/route_card.dart';
-import 'package:pos2/presentation/screens/home/widgets/toggle_screen.dart';
+import 'package:pos2/data/models/routes/route_card_model.dart';
+import 'package:pos2/presentation/widgets/routes_menu.dart';
 
 class Home extends StatelessWidget {
   final String? email;
@@ -8,33 +8,39 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RouteCard products = RouteCard(
-      route: 'products',
-      routeName: 'Productos',
-      backgroundColor: Colors.transparent,
-    );
-
-    RouteCard sales = RouteCard(
-      route: 'sales',
-      routeName: 'Ventas',
-      backgroundColor: Colors.transparent,
-    );
-
-    RouteCard settings = RouteCard(
-      route: 'settings',
-      routeName: 'Ajustes',
-      backgroundColor: Colors.transparent,
-    );
-
-    List<RouteCard> routeCards = [products, sales, settings];
+    final List<RouteCardModel> routeModels = [
+      RouteCardModel(
+        route: 'products',
+        routeName: 'Productos',
+        backgroundColor: Colors.transparent,
+      ),
+      RouteCardModel(
+        route: 'sales',
+        routeName: 'Ventas',
+        backgroundColor: Colors.transparent,
+      ),
+      RouteCardModel(
+        route: 'settings',
+        routeName: 'Ajustes',
+        backgroundColor: Colors.transparent,
+      ),
+      RouteCardModel(
+        route: 'reports',
+        routeName: 'Reportes',
+        backgroundColor: Colors.transparent,
+      ),
+    ];
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('MiniMarket')),
+        appBar: AppBar(
+          title: Text(
+            'MiniMarket',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+          ),
+        ),
         body: ListView(
-          children: <Widget>[
-            Center(child: ToggleScreen(routeCards: routeCards)),
-          ],
+          children: <Widget>[Center(child: RoutesMenu(routes: routeModels))],
         ),
       ),
     );
