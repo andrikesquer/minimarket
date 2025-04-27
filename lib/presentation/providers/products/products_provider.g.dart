@@ -6,7 +6,7 @@ part of 'products_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$addingProductHash() => r'256be457a9b0ccf6ee139082a622add4654af79d';
+String _$addingProductHash() => r'6e8b942be42069706553c9f80df407f0987c12a0';
 
 /// See also [AddingProduct].
 @ProviderFor(AddingProduct)
@@ -23,7 +23,7 @@ final addingProductProvider =
     );
 
 typedef _$AddingProduct = AutoDisposeNotifier<bool>;
-String _$editingProductHash() => r'a05e3562e2a6a7762f32f8e575b6ceb98421d7ae';
+String _$editingProductHash() => r'63a267412df63b7e798704ee37f0d6afc9a7115f';
 
 /// See also [EditingProduct].
 @ProviderFor(EditingProduct)
