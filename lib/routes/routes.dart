@@ -50,6 +50,14 @@ class Routes {
         builder: (BuildContext context, GoRouterState state) {
           return const ReportsScreen();
         },
+        routes: [
+          GoRoute(
+            path: 'sales',
+            builder: (context, state) {
+              return SalesReportScreen();
+            },
+          ),
+        ],
       ),
       GoRoute(
         path: '/login',

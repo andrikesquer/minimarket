@@ -7,3 +7,4 @@ export 'package:pos2/presentation/screens/sales/sales_history_screen.dart';
 export 'package:pos2/presentation/screens/cart/cart_screen.dart';
 export 'package:pos2/presentation/screens/settings_screen.dart';
 export 'package:pos2/presentation/screens/reports/reports_screen.dart';
+export 'package:pos2/presentation/screens/reports/sales_report_screen.dart';
