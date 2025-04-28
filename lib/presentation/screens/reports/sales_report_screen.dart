@@ -28,13 +28,12 @@ class SalesReportScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: Padding(padding: const EdgeInsets.all(15), child: _body()),
-        bottomNavigationBar: Padding(
-          padding: EdgeInsets.all(15),
-          child: ElevatedButton(
-            onPressed: () {},
-            child: const Text('Consultar'),
-          ),
+        body: _body(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          tooltip: 'Buscar',
+          elevation: 5,
+          child: const Icon(Icons.search),
         ),
       ),
     );
@@ -72,19 +71,54 @@ class SalesReportScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
+                spacing: 10,
                 children: [
-                  Text('ID Zona ${reports[index].ID_ZONA}'),
-                  Text('ID Sucursal ${reports[index].ID_SUCURSAL}'),
-                  Text('ID Tipo ${reports[index].ID_TIPO}'),
-                  Text('Año ${reports[index].YEAR}'),
-                  Text('Mes ${reports[index].MES}'),
-                  Text('Semana ${reports[index].SEMANA}'),
-                  Text('Movimientos ${reports[index].MOVIMIENTOS}'),
-                  Text('Valor ${reports[index].VALOR}'),
-                  Text('Valor en dólares ${reports[index].VALOR_USD}'),
-                  Text('Filial ${reports[index].FILIAL}'),
-                  Text('Cantidad ${reports[index].CANTIDAD}'),
-                  Text('Cancelado ${reports[index].CANCELADO}'),
+                  Text(
+                    'Venta $index',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    spacing: 5,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          Text('ID Zona ${reports[index].ID_ZONA}'),
+                          Text('ID Sucursal ${reports[index].ID_SUCURSAL}'),
+                          Text('ID Tipo ${reports[index].ID_TIPO}'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text('${reports[index].YEAR}'),
+                          Text('Mes ${reports[index].MES}'),
+                          Text('Semana ${reports[index].SEMANA}'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text('Movimientos ${reports[index].MOVIMIENTOS}'),
+                          Text('MX \$${reports[index].VALOR}'),
+                          Text('USD \$${reports[index].VALOR_USD}'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            reports[index].FILIAL == true
+                                ? 'Filial: Sí'
+                                : 'Filial: No',
+                          ),
+                          Text('Cant. ${reports[index].CANTIDAD}'),
+                          Text(
+                            reports[index].CANCELADO
+                                ? 'Cancelado: Si'
+                                : 'Cancelado: No',
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
