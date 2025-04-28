@@ -5,7 +5,7 @@ import 'package:pos2/presentation/screens/screens.dart';
 class Routes {
   final GoRouter router = GoRouter(
     debugLogDiagnostics: true,
-    initialLocation: '/login',
+    initialLocation: '/:email',
     routes: <RouteBase>[
       GoRoute(
         path: '/products',

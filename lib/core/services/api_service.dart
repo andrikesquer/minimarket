@@ -1,7 +1,7 @@
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
-import 'package:pos2/data/models/user_model.dart';
-import 'package:pos2/data/models/login_model.dart';
+import 'package:pos2/data/models/login_request.dart';
+import 'package:pos2/data/models/login_response.dart';
 
 part 'api_service.g.dart';
 

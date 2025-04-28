@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:pos2/data/models/login_model.dart';
-import 'package:pos2/data/models/user_model.dart';
+import 'package:pos2/data/models/login_request.dart';
+import 'package:pos2/data/models/login_response.dart';
 import 'package:pos2/core/services/api_service.dart';
 
 class LoginRepository {
@@ -9,10 +9,10 @@ class LoginRepository {
   LoginRepository() : _apiService = ApiService(Dio());
 
   Future<LoginResponse> login(String email, String password) async {
-    final loginRequest = LoginRequest(Email: email, Password: password);
+    final LoginRequest loginRequest = LoginRequest(Email: email, Password: password);
 
     try {
-      final response = await _apiService.login(loginRequest);
+      final LoginResponse response = await _apiService.login(loginRequest);
       return response;
     } catch (e) {
       rethrow;
