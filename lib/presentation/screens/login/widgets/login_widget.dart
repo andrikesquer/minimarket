@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pos2/core/encryption/secure_storage.dart';
 import 'package:pos2/domain/repositories/login_repository.dart';
+import 'package:pos2/presentation/providers/session_provider.dart';
 
-class LoginWidget extends StatefulWidget {
+class LoginWidget extends ConsumerStatefulWidget {
   const LoginWidget({super.key});
 
   @override
-  LoginWidgetState createState() => LoginWidgetState();
+  ConsumerState createState() => LoginWidgetState();
 }
 
-class LoginWidgetState extends State<LoginWidget> {
+class LoginWidgetState extends ConsumerState<LoginWidget> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController loginEmailController = TextEditingController();
 
@@ -131,10 +132,9 @@ class LoginWidgetState extends State<LoginWidget> {
       try {
         final response = await loginRepository.login(email, password);
         if (response.Success) {
-          UserCredentials.saveCredentials(
-            response.Email,
-            response.IdSubscription,
-          );
+          ref
+              .read(sessionProvider.notifier)
+              .login(response.Email, response.IdSubscription);
           context.go('/${response.Email}');
         } else {
           ScaffoldMessenger.of(context).showSnackBar(

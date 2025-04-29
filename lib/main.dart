@@ -21,19 +21,31 @@ Future<void> main() async {
 }
 
 class MyApp extends ConsumerWidget {
-  MyApp({super.key});
-
-  final Routes _routes = Routes();
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final bool isDarkMode = ref.watch(darkModeProvider);
+    final router = ref.watch(goRouterProvider);
+    final isDarkMode = ref.watch(darkModeProvider);
 
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'MiniMarket',
-      theme: AppTheme(isDarkMode: isDarkMode).getTheme(),
-      routerConfig: _routes.router,
+    return isDarkMode.when(
+      loading:
+          () => const MaterialApp(
+            home: Scaffold(body: Center(child: CircularProgressIndicator())),
+          ),
+      error:
+          (e, _) => MaterialApp(
+            home: Scaffold(
+              body: Center(child: Text('Error cargando tema: $e')),
+            ),
+          ),
+      data:
+          (isDarkMode) => MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            title: 'MiniMarket',
+            theme: AppTheme(isDarkMode: isDarkMode).getTheme(),
+            routerConfig: router,
+          ),
     );
   }
 }

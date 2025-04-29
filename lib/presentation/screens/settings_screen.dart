@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pos2/core/encryption/secure_storage.dart';
 import 'package:pos2/presentation/providers/theme/theme_provider.dart';
+import 'package:pos2/presentation/providers/session_provider.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final bool isDarkMode = ref.watch(darkModeProvider);
+    final isDarkMode = ref.watch(darkModeProvider);
 
     return SafeArea(
       child: Scaffold(
@@ -44,16 +44,21 @@ class SettingsScreen extends ConsumerWidget {
                   onPressed: () {
                     ref.read(darkModeProvider.notifier).toggleDarkMode();
                   },
-                  icon: Icon(
-                    isDarkMode
-                        ? Icons.dark_mode_outlined
-                        : Icons.light_mode_outlined,
-                    size: 100,
+                  icon: isDarkMode.when(
+                    data:
+                        (isDarkMode) => Icon(
+                          isDarkMode
+                              ? Icons.dark_mode_outlined
+                              : Icons.light_mode_outlined,
+                          size: 100,
+                        ),
+                    loading: () => CircularProgressIndicator(),
+                    error: (_, _) => Icon(Icons.error, size: 100),
                   ),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // ref.read(darkModeProvider.notifier).getStorageTheme();
+                    ref.read(sessionProvider.notifier).logout();
                   },
                   child: Text('Cerrar Sesión'),
                 ),

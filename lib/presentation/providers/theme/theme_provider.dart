@@ -1,43 +1,19 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:pos2/core/encryption/secure_storage.dart';
 
 part 'theme_provider.g.dart';
-
-/*
-@riverpod
-class AsyncDarkMode extends _$AsyncDarkMode {
-  Future<bool> _getStorageTheme() async {
-    final bool storedTheme = await Configuration.getAppTheme();
-    // print('$storedTheme');
-    //
-    // if (storedTheme == true) {
-    //   print('modo oscuro');
-    // } else {
-    //   print('modo claro');
-    // }
-    return storedTheme;
-  }
-
-  @override
-  FutureOr<bool> build() async {
-    return _getStorageTheme();
-  }
-
-  void toggleDarkMode() async {
-    final bool value = await _getStorageTheme();
-
-    state = !value;
-
-    Configuration.saveAppTheme(state);
-  }
-}
- */
 
 @riverpod
 class DarkMode extends _$DarkMode {
   @override
-  bool build() => false;
+  Future<bool> build() async {
+    final isDark = await Configuration.getAppTheme();
+    return isDark;
+  }
 
-  void toggleDarkMode() {
-    state = !state;
+  Future<void> toggleDarkMode() async {
+    final newValue = !(state.value ?? false);
+    state = AsyncData(newValue);
+    await Configuration.saveAppTheme(newValue);
   }
 }

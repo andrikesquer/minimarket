@@ -1,76 +1,70 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pos2/presentation/providers/session_provider.dart';
 import 'package:pos2/presentation/screens/screens.dart';
+import 'package:pos2/data/models/session_model.dart';
 
-class Routes {
-  final GoRouter router = GoRouter(
+final goRouterProvider = Provider<GoRouter>((ref) {
+  final sessionState = ref.watch(sessionProvider);
+
+  return GoRouter(
     debugLogDiagnostics: true,
-    initialLocation: '/:email',
+    initialLocation: '/login',
+    refreshListenable: GoRouterRefreshNotifier(ref),
+    redirect: (context, state) {
+      final isLoggingIn = state.matchedLocation == '/login';
+
+      if (sessionState.status == Status.unauthenticated && !isLoggingIn) {
+        return '/login';
+      }
+
+      if (sessionState.status == Status.authenticated && isLoggingIn) {
+        return '/${sessionState.email}';
+      }
+
+      return null;
+    },
     routes: <RouteBase>[
-      GoRoute(
-        path: '/products',
-        builder: (BuildContext context, GoRouterState state) {
-          return const Products();
-        },
-      ),
+      GoRoute(path: '/products', builder: (context, state) => const Products()),
       GoRoute(
         path: '/sales',
-        builder: (BuildContext context, GoRouterState state) {
-          return const SalesScreen();
-        },
+        builder: (context, state) => const SalesScreen(),
         routes: [
-          GoRoute(
-            path: 'sell',
-            builder: (context, state) {
-              return SellScreen();
-            },
-          ),
-          GoRoute(
-            path: 'history',
-            builder: (context, state) {
-              return SalesHistory();
-            },
-          ),
+          GoRoute(path: 'sell', builder: (context, state) => SellScreen()),
+          GoRoute(path: 'history', builder: (context, state) => SalesHistory()),
         ],
       ),
-      GoRoute(
-        path: '/cart',
-        builder: (BuildContext context, GoRouterState state) {
-          return const Cart();
-        },
-      ),
+      GoRoute(path: '/cart', builder: (context, state) => const Cart()),
       GoRoute(
         path: '/settings',
-        builder: (BuildContext context, GoRouterState state) {
-          return const SettingsScreen();
-        },
+        builder: (context, state) => const SettingsScreen(),
       ),
       GoRoute(
         path: '/reports',
-        builder: (BuildContext context, GoRouterState state) {
-          return const ReportsScreen();
-        },
+        builder: (context, state) => const ReportsScreen(),
         routes: [
           GoRoute(
             path: 'sales',
-            builder: (context, state) {
-              return SalesReportScreen();
-            },
+            builder: (context, state) => SalesReportScreen(),
           ),
         ],
       ),
-      GoRoute(
-        path: '/login',
-        builder: (BuildContext context, GoRouterState state) {
-          return const LoginScreen();
-        },
-      ),
+      GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
       GoRoute(
         path: '/:email',
-        builder: (BuildContext context, GoRouterState state) {
-          return Home(email: state.pathParameters['email']);
+        builder: (context, state) {
+          final email = state.pathParameters['email']!;
+          return Home(email: email);
         },
       ),
     ],
   );
+});
+
+// Change notifier
+class GoRouterRefreshNotifier extends ChangeNotifier {
+  GoRouterRefreshNotifier(Ref ref) {
+    ref.listen<SessionState>(sessionProvider, (_, __) => notifyListeners());
+  }
 }
