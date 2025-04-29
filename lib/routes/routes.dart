@@ -10,7 +10,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
 
   return GoRouter(
     debugLogDiagnostics: true,
-    initialLocation: '/login',
+    initialLocation: '/:email',
     refreshListenable: GoRouterRefreshNotifier(ref),
     redirect: (context, state) {
       final isLoggingIn = state.matchedLocation == '/login';
@@ -46,7 +46,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         routes: [
           GoRoute(
             path: 'sales',
-            builder: (context, state) => SalesReportScreen(),
+            builder: (context, state) => SalesReport(),
           ),
         ],
       ),

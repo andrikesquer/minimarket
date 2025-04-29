@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'report_model.g.dart';
+part 'report_response.g.dart';
 
 @JsonSerializable()
-class ReportModel {
+class ReportResponse {
   final int ID_ZONA;
 
   final int ID_SUCURSAL;
@@ -28,7 +28,7 @@ class ReportModel {
 
   final bool CANCELADO;
 
-  ReportModel({
+  ReportResponse({
     required this.ID_ZONA,
     required this.ID_SUCURSAL,
     required this.ID_TIPO,
@@ -43,8 +43,8 @@ class ReportModel {
     required this.CANCELADO,
   });
 
-  factory ReportModel.fromJson(Map<String, dynamic> json) =>
-      _$ReportModelFromJson(json);
+  factory ReportResponse.fromJson(Map<String, dynamic> json) =>
+      _$ReportResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ReportModelToJson(this);
+  Map<String, dynamic> toJson() => _$ReportResponseToJson(this);
 }
