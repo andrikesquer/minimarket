@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pos2/data/models/report_response.dart';
 import 'package:pos2/domain/repositories/sales_report_repository.dart';
@@ -12,22 +13,50 @@ class IsFiltering extends _$IsFiltering {
   void toggleFiltering() => state = !state;
 }
 
-// @riverpod
-// class Search extends _$Search {
-//   @override
-//   FutureOr<ReportModel> build() async {
-//     return null;
-//   }
-// }
+final startDateProvider = StateProvider<DateTime?>((ref) => null);
+final endDateProvider = StateProvider<DateTime?>((ref) => null);
 
-// class ReportListNotifier extends StateNotifier<List<ReportResponse>> {
-//   final ReportRepository _reportRepository;
-//
-//   ReportListNotifier(this._reportRepository) : super([]) {
-//    refresh();
-//   }
-//
-//   // void refresh() async {
-//   //   state = await _reportRepository.report(idSa, idCom, idSub, fIni, fFin, idSuc, tRep, tA, idArts, isClPr, cCont);
-//   // }
-// }
+class SalesReportNotifier extends StateNotifier<List<ReportResponse>> {
+  SalesReportNotifier() : super([]);
+
+  final ReportRepository _repository = ReportRepository();
+
+  Future<void> fetchReports(
+    String idSa,
+    int idCom,
+    int idSub,
+    String fIni,
+    String fFin,
+    int idSuc,
+    int tRep,
+    int tA,
+    String idArts,
+    int idClPr,
+    bool cCont,
+  ) async {
+    try {
+      final List<ReportResponse> reports = await _repository.reports(
+        idSa,
+        idCom,
+        idSub,
+        fIni,
+        fFin,
+        idSuc,
+        tRep,
+        tA,
+        idArts,
+        idClPr,
+        cCont,
+      );
+      state = reports;
+    } catch (e) {
+      state = [];
+      debugPrint("Error: $e");
+    }
+  }
+}
+
+final salesReportProvider =
+    StateNotifierProvider<SalesReportNotifier, List<ReportResponse>>((ref) {
+      return SalesReportNotifier();
+    });

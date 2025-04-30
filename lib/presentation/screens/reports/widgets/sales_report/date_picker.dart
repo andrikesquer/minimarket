@@ -1,54 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pos2/presentation/providers/sales_report_provider.dart';
 
-class DatePicker extends StatefulWidget {
+class DatePicker extends ConsumerWidget {
   final int firstYear;
+  final bool isStartDate;
 
   const DatePicker({
     super.key,
     required this.firstYear,
+    required this.isStartDate,
   });
 
   @override
-  State<DatePicker> createState() => _DatePickerState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedDate =
+        isStartDate ? ref.watch(startDateProvider) : ref.watch(endDateProvider);
 
-class _DatePickerState extends State<DatePicker> {
-  late DateTime _firstDate;
-
-  DateTime? selectedDate;
-
-  @override
-  void initState() {
-    _firstDate = DateTime(widget.firstYear);
-    super.initState();
-  }
-
-  Future<void> _selectDate() async {
-    final DateTime? pickedDate = await showDatePicker(
-      context: context,
-      firstDate: _firstDate,
-      lastDate: DateTime.now(),
-    );
-
-    setState(() {
-      selectedDate = pickedDate;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
-      spacing: 20,
       children: <Widget>[
         Text(
           selectedDate != null
-              ? '${selectedDate!.day}/${selectedDate!.month}/${selectedDate!.year}'
+              ? '${selectedDate.day}/${selectedDate.month}/${selectedDate.year}'
               : 'Sin selección',
         ),
         OutlinedButton(
-          onPressed: () {
-            _selectDate();
+          onPressed: () async {
+            final DateTime? pickedDate = await showDatePicker(
+              context: context,
+              firstDate: DateTime(firstYear),
+              lastDate: DateTime.now(),
+            );
+            if (pickedDate != null) {
+              if (isStartDate) {
+                ref.read(startDateProvider.notifier).state = pickedDate;
+              } else {
+                ref.read(endDateProvider.notifier).state = pickedDate;
+              }
+            }
           },
           child: const Text('Seleccionar'),
         ),

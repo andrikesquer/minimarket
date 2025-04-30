@@ -1,5 +1,5 @@
-import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
+import 'package:retrofit/retrofit.dart';
 import 'package:pos2/data/models/report_response.dart';
 
 part 'api_reports.g.dart';
@@ -21,8 +21,4 @@ abstract class ApiReports {
     @Query('idClPr') int idClPr,
     @Query('cCont') bool cCont,
   );
-
-  // factory ApiReports(Dio dio) = _ApiReports;
-  // @GET('ObtenerLibroGeneral')
-  // Future<List<ReportResponse>> getReports(@Body() ReportRequest request);
 }

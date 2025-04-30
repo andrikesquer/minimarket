@@ -22,9 +22,9 @@ class Filters extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  DatePicker(firstYear: startYear),
+                  DatePicker(firstYear: startYear, isStartDate: true),
                   Icon(Icons.arrow_forward),
-                  DatePicker(firstYear: startYear),
+                  DatePicker(firstYear: startYear, isStartDate: false),
                 ],
               ),
             ],
