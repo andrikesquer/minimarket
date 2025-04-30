@@ -1,0 +1,137 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4850974843288692582",
+      "lastPropertyId": "7:1531888078167569134",
+      "name": "CartItem",
+      "properties": [
+        {
+          "id": "1:7712849893499057141",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8237497419310626862",
+          "name": "productId",
+          "type": 6
+        },
+        {
+          "id": "3:7579733161200587961",
+          "name": "productName",
+          "type": 9
+        },
+        {
+          "id": "4:3180718053263272734",
+          "name": "productPrice",
+          "type": 8
+        },
+        {
+          "id": "5:676127715149326256",
+          "name": "productStock",
+          "type": 6
+        },
+        {
+          "id": "6:526490462677354201",
+          "name": "productQty",
+          "type": 6
+        },
+        {
+          "id": "7:1531888078167569134",
+          "name": "shopOrderId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:668324892238423576",
+          "relationTarget": "ShopOrder"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:2228730238278008597",
+      "lastPropertyId": "2:3553469999894954502",
+      "name": "Customer",
+      "properties": [
+        {
+          "id": "1:6674191979267619510",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3553469999894954502",
+          "name": "email",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:974434976712259507",
+      "lastPropertyId": "4:5318278884433399804",
+      "name": "Product",
+      "properties": [
+        {
+          "id": "1:7463350100456135083",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8448101543605047856",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:8303237717742247077",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "4:5318278884433399804",
+          "name": "stock",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:1464930533826628168",
+      "lastPropertyId": "3:5752908084191189607",
+      "name": "ShopOrder",
+      "properties": [
+        {
+          "id": "1:9009440605062702307",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5851712318916019894",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "3:5752908084191189607",
+          "name": "total",
+          "type": 8
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:1464930533826628168",
+  "lastIndexId": "1:668324892238423576",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

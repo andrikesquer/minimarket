@@ -14,11 +14,31 @@ class SalesReport extends ConsumerStatefulWidget {
 class _SalesReportState extends ConsumerState<SalesReport> {
   late int startYear;
 
+  late bool hasFiltered;
+
+  late bool isLoading;
+
   @override
   void initState() {
-    super.initState();
+    isLoading = true;
     _getStartYear();
     _loadLastMonthReports();
+    hasFiltered = false;
+    super.initState();
+  }
+
+  _isLoading() {
+    Future.delayed(const Duration(seconds: 2), () {
+      setState(() {
+        isLoading = false;
+      });
+    });
+  }
+
+  _hasFiltered() {
+    setState(() {
+      hasFiltered = true;
+    });
   }
 
   _getStartYear() {
@@ -53,9 +73,15 @@ class _SalesReportState extends ConsumerState<SalesReport> {
           0,
           false,
         );
+
+    _isLoading();
   }
 
   _filterReports() {
+    setState(() {
+      isLoading = true;
+    });
+
     final start = ref.read(startDateProvider);
     final end = ref.read(endDateProvider);
 
@@ -78,6 +104,9 @@ class _SalesReportState extends ConsumerState<SalesReport> {
             0,
             false,
           );
+
+      _isLoading();
+      _hasFiltered();
     }
   }
 
@@ -90,10 +119,18 @@ class _SalesReportState extends ConsumerState<SalesReport> {
       child: Scaffold(
         appBar: SalesReportAppBar(),
         body:
-            isFiltering
+            isLoading
+                ? Center(child: CircularProgressIndicator())
+                : isFiltering
                 ? Filters(startYear: startYear)
                 : reports.isEmpty
-                ? const Center(child: CircularProgressIndicator())
+                ? hasFiltered == true
+                    ? Center(
+                      child: Text(
+                        'No hay resultados para la periodo seleccionado',
+                      ),
+                    )
+                    : Center(child: Text('No hay reportes el último mes'))
                 : ReportList(reports: reports),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -106,7 +143,7 @@ class _SalesReportState extends ConsumerState<SalesReport> {
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('Selecciona un rango de fechas'),
+                    content: Text('Seleccione un rango de fechas'),
                   ),
                 );
                 return;
